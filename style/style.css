@@ -27,3 +27,7 @@ body, h1, h2, h3, ul, li {
 .horizontal-menu li a:hover {
     background-color: #555;
 }
+
+.horizontal-menu li a.active {
+    background-color: #555;
+}
