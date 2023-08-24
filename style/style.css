@@ -1,0 +1,29 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the horizontal menu */
+.horizontal-menu {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+}
+
+.horizontal-menu li {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.horizontal-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.horizontal-menu li a:hover {
+    background-color: #555;
+}
