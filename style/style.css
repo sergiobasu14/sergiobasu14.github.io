@@ -1,7 +1,14 @@
 /* Reset default margin and padding */
-body, h1, h2, h3, ul, li {
+body, h1, h2, h3 {
     margin: 0;
     padding: 0;
+    list-style: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
     list-style: none;
 }
 
@@ -12,24 +19,34 @@ body, h1, h2, h3, ul, li {
 }
 
 .header {
-    position: fixed;
+
     top: 0;
     width: 100%;
     background-color: #333;
     color: aliceblue;
+    height: 30%;
 }
 
 .single {
-    margin: 2%;
-    padding: 2%;
+    flex: 1;
+    padding: 10%;
     text-align: justify;
-    
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.color  {
+    background:#999;
+    color:#fff;
+    padding: 5%;
 }
 
 .double {
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
+    padding: 5%;
 }
 
 .element {
@@ -53,14 +70,16 @@ body, h1, h2, h3, ul, li {
 .horizontal-menu li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight:lighter;
     transition: background-color 0.3s;
 }
 
-.horizontal-menu li a:hover {
+.horizontal-menu li:hover {
     background-color: #555;
 }
 
-.horizontal-menu li a.active {
+.horizontal-menu li.active {
+    color: #fff;
+    transition: background-color 0.3s; 
     background-color: #555;
 }
