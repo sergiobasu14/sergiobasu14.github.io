@@ -2,24 +2,20 @@
 body, h1, h2, h3 {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 li {
     list-style: none;
 }
 
-.name{
+.name {
     padding-left: 4%;
-    padding-top:2%;
+    padding-top: 2%;
     padding-bottom: 2%;
 }
 
 .header {
-
     top: 0;
     width: 100%;
     background-color: #333;
@@ -28,38 +24,38 @@ li {
 }
 
 .single {
+    display: flex;
     flex: 1;
-    padding: 10%;
-    text-align: justify;
+    padding: 5%;
     justify-content: center;
     align-items: center;
-    display: block;
-}
-
-.color  {
-    background:#999;
-    color:#fff;
-    padding: 5%;
+    text-align: justify;
 }
 
 .double {
-    display:flex;
+    display: flex;
+    flex: 1;
+    padding: 0%;
     justify-content: center;
     align-items: center;
-    padding: 5%;
-    flex-direction: row;
-    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.color {
+    background: #999;
+    color: #fff;
 }
 
 .element {
     flex: 1;
-    width: 50%;
     text-align: center;
+    width: 50%;
+    height: 300px;
 }
 
 /* Apply styles to the horizontal menu */
 .horizontal-menu {
-    list-style: none;
     display: flex;
 }
 
@@ -72,33 +68,47 @@ li {
 .horizontal-menu li a {
     text-decoration: none;
     color: white;
-    font-weight:lighter;
-    transition: background-color 0.3s;
+    font-weight: lighter;
 }
 
 .horizontal-menu li:hover {
     background-color: #555;
+    transition: background-color 0.3s;
 }
 
 .horizontal-menu li.active {
     color: #fff;
-    transition: background-color 0.3s; 
     background-color: #555;
 }
 
-/* carousel */
-.carousel {
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
+/* Slideshow */
+.slideshow {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    animation: bg-slide 10s linear infinite;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-img {
-    flex: 1;
-    width:50%;
-    height: 10%;
+@keyframes bg-slide {
+    0%{
+        background-image: url('/images/etl.jpg');
+    }
+    20%{
+        background-image: url('/images/er.png');
+    }
+    40%{
+        background-image: url('/images/etl.jpg');
+    }
+    60%{
+        background-image: url('/images/etl.jpg');
+    }
+    80%{
+        background-image: url('/images/pipeline.png');
+    }
+    100%{
+        background-image: url('/images/tunning.jpg');
+    }
+    
 }

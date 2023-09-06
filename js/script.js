@@ -1,13 +1,19 @@
-const carousel = document.querySelector('.carousel-inner');
-const images = document.querySelectorAll('.carousel-inner img');
+let slideIndex = 0;
+showSlides();
 
-let currentIndex = 0;
-const interval = 2000; // Change image every 2 seconds
-
-function slideCarousel() {
-  currentIndex = (currentIndex + 1) % images.length;
-  const translateValue = -currentIndex * 100;
-  carousel.style.transform = `translateX(${translateValue}%)`;
+function showSlides() {
+  let slides = document.querySelectorAll(".slide");
+  
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  slideIndex++;
+  
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  
+  slides[slideIndex - 1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Change slide every 3 seconds
 }
-
-setInterval(slideCarousel, interval);
