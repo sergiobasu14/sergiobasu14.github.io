@@ -1,13 +1,17 @@
-const carousel = document.querySelector('.carousel-inner');
-const images = document.querySelectorAll('.carousel-inner img');
+const fs = require('fs');
+const path = require('path');
 
-let currentIndex = 0;
-const interval = 2000; // Change image every 2 seconds
+const directoryPath = '../images'; // Replace with the actual folder path
 
-function slideCarousel() {
-  currentIndex = (currentIndex + 1) % images.length;
-  const translateValue = -currentIndex * 100;
-  carousel.style.transform = `translateX(${translateValue}%)`;
-}
+fs.readdir(directoryPath, (err, files) => {
+    if (err) {
+        console.error('Error reading directory:', err);
+        return;
+    }
 
-setInterval(slideCarousel, interval);
+    const fileNames = files.filter(file => {
+        return fs.statSync(path.join(directoryPath, file)).isFile();
+    });
+
+    console.log(fileNames);
+});

@@ -6,20 +6,32 @@ body, h1, h2, h3 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
+    background-color: #333;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 li {
     list-style: none;
 }
 
-.name{
-    padding-left: 4%;
-    padding-top:2%;
-    padding-bottom: 2%;
+.name {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.name p{
+    font-size: 20px;
+    color:#999;
+    text-align: justify;
+    padding-top: 10%;
 }
 
 .header {
-
     top: 0;
     width: 100%;
     background-color: #333;
@@ -42,23 +54,16 @@ li {
     padding: 5%;
 }
 
-.double {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
-    flex-direction: row;
-    flex: 1;
-}
-
 .element {
     flex: 1;
     width: 50%;
     text-align: center;
 }
 
-/* Apply styles to the horizontal menu */
+/*Navigator*/
 .horizontal-menu {
+    padding-left: 30%;
+    padding-right: 30% ;
     list-style: none;
     display: flex;
 }
@@ -74,31 +79,129 @@ li {
     color: white;
     font-weight:lighter;
     transition: background-color 0.3s;
+    position: relative; /* This allows the pseudo-element to be positioned relative to the anchor element */
+    text-decoration: none; /* Remove the default underline from links */
 }
 
 .horizontal-menu li:hover {
-    background-color: #555;
+    background-color: gray;
 }
 
 .horizontal-menu li.active {
     color: #fff;
     transition: background-color 0.3s; 
-    background-color: #555;
 }
 
-/* carousel */
-.carousel {
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
+.double {
+    display:flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #fff;
 }
 
-.carousel-inner {
+.double h1 {
+    font-weight: lighter;
+}
+
+.double h3{
+    font-size: 60px;
+    color: grey;
+}
+
+.profile-inner {
     display: flex;
-    transition: transform 1s ease-in-out;
+    align-items: center;
+    text-align: center;
 }
-img {
-    flex: 1;
-    width:50%;
-    height: 10%;
+
+#profile-pic {
+    border-radius: 50%;
+    width: 50%;
+    box-shadow: 0 0 15px 5px gray;
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*resume.html*/
+.exp {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 2%;
+}
+.exp-top {
+    display: flex;
+    flex-direction: row;
+    background-color:#ffffff33;
+    padding-top: 4%;
+    border-radius:10px 10px 0 0;
+}
+
+.exp-logo {
+    flex: 0 0 20%;
+}
+
+.exp-logo img {
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exp-name {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    color:aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+.time-exp{
+    color: #999;
+}
+
+.position-name {
+    font-size: 30px;
+}
+
+.company-name {
+    font: 20px;
+}
+
+.exp-time {
+    font-size: 30px;
+    font-weight: bold;
+    color: lightgray;
+    flex: 0 0 30%;
+    top:0;
+    text-align: center; /* Horizontally center the text */
+    padding-top: 5px; /* You can adjust this value to fit your design */
+    padding-bottom: 5px; /* You can adjust this value to fit your design */
+}
+
+.exp-time p {
+    margin: 0; /* Reset margin for the <p> element */
+}
+
+.exp-bottom {
+    display: flex;
+    flex-direction: row;
+    background-color:#ffffff33;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-radius:0 0 10px 10px;
+    padding-right: 10%;
+}
+
+.exp-achieve-logo {
+    text-align: center;
+    flex: 0 0 22%;
+}
+
+.exp-achieve-detail {
+    flex: 0 0 75%;
+    color: lightgray;
 }
