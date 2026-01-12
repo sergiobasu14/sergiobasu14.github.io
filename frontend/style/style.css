@@ -1,0 +1,345 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* Improved readability */
+}
+
+li {
+    list-style: none;
+}
+
+.name {
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name p {
+    font-size: 20px;
+    color: #ddd;
+    text-align: justify;
+    padding-top: 5%;
+    /* Adjusted padding for better spacing */
+}
+
+.header {
+    width: 100%;
+    background-color: #222;
+    /* Darker header for contrast */
+    color: #fff;
+    padding: 1% 0;
+    /* Added padding for breathing space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    position: sticky;
+    /* Stick the header to the top */
+    top: 0;
+    z-index: 1000;
+}
+
+.single {
+    display: flex;
+    flex: 1;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.element {
+    flex: 1;
+    text-align: center;
+    width: 50%;
+    height: 300px;
+}
+
+/* Navigator */
+.horizontal-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.horizontal-menu li {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.horizontal-menu li a {
+    text-decoration: none;
+    color: #bbb;
+    /* Softer color for non-active links */
+    font-weight: lighter;
+    transition: color 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.horizontal-menu li a:hover {
+    color: #fff;
+}
+
+.horizontal-menu li.active a {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    /* Highlight active link */
+}
+
+.double {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow elements to wrap on smaller screens */
+    padding: 5%;
+    color: #fff;
+    top: 10%;
+}
+
+.double h1 {
+    font-weight: lighter;
+    font-size: 48px;
+    /* Slightly larger font for emphasis */
+}
+
+.double h3 {
+    font-size: 36px;
+    color: #aaa;
+    /* Softer grey for the subtitle */
+    margin-bottom: 20px;
+    /* Added margin for spacing */
+}
+
+.profile-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the image */
+    text-align: center;
+    width: 100%;
+    /* Ensure the image container takes full width on smaller screens */
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 60%;
+    /* Slightly larger image */
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    /* Softer shadow */
+    max-width: 300px;
+    /* Limit the size on larger screens */
+    height: auto;
+}
+
+/* Resume Section */
+.resume-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5% 120px;
+}
+
+.resume-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.resume-intro h1 {
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.resume-intro p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 24px;
+    background: #1f1f1f;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-media {
+    flex: 0 0 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 18px;
+    background: #2b2b2b;
+}
+
+.experience-media img {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.experience-content .role-title {
+    background: transparent;
+    font-size: 32px;
+    margin: 6px 0;
+}
+
+.experience-content .period {
+    color: #9bd8ff;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.experience-content .org {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.experience-content .detail {
+    color: #ccc;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .experience-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .experience-media {
+        width: 100%;
+    }
+
+    .experience-content {
+        width: 100%;
+    }
+}
+
+.contact-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 5% 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-intro {
+    text-align: center;
+}
+
+.contact-intro h1 {
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.contact-intro p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #1f1f1f;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-form label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 14px;
+    color: #9bd8ff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #2b2b2b;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 14px 18px;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.3);
+}
+
+.contact-form button {
+    border: none;
+    border-radius: 20px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: linear-gradient(120deg, #4fc3f7, #0288d1);
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 24px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    margin-top: 50px;
+}
