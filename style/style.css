@@ -1,0 +1,231 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* Improved readability */
+}
+
+li {
+    list-style: none;
+}
+
+.name {
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name p {
+    font-size: 20px;
+    color: #ddd;
+    text-align: justify;
+    padding-top: 5%;
+    /* Adjusted padding for better spacing */
+}
+
+.header {
+    width: 100%;
+    background-color: #222;
+    /* Darker header for contrast */
+    color: #fff;
+    padding: 1% 0;
+    /* Added padding for breathing space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    position: sticky;
+    /* Stick the header to the top */
+    top: 0;
+    z-index: 1000;
+}
+
+.single {
+    display: flex;
+    flex: 1;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.element {
+    flex: 1;
+    text-align: center;
+    width: 50%;
+    height: 300px;
+}
+
+/* Navigator */
+.horizontal-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.horizontal-menu li {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.horizontal-menu li a {
+    text-decoration: none;
+    color: #bbb;
+    /* Softer color for non-active links */
+    font-weight: lighter;
+    transition: color 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.horizontal-menu li a:hover {
+    color: #fff;
+}
+
+.horizontal-menu li.active a {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    /* Highlight active link */
+}
+
+.double {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow elements to wrap on smaller screens */
+    padding: 5%;
+    color: #fff;
+    top: 10%;
+}
+
+.double h1 {
+    font-weight: lighter;
+    font-size: 48px;
+    /* Slightly larger font for emphasis */
+}
+
+.double h3 {
+    font-size: 36px;
+    color: #aaa;
+    /* Softer grey for the subtitle */
+    margin-bottom: 20px;
+    /* Added margin for spacing */
+}
+
+.profile-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the image */
+    text-align: center;
+    width: 100%;
+    /* Ensure the image container takes full width on smaller screens */
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 60%;
+    /* Slightly larger image */
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    /* Softer shadow */
+    max-width: 300px;
+    /* Limit the size on larger screens */
+    height: auto;
+}
+
+/* Resume Section */
+.exp {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    /* Increased padding for readability */
+}
+
+.exp-top {
+    display: flex;
+    flex-direction: row;
+    background-color: #444;
+    /* Slightly lighter background */
+    padding: 2%;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    /* Added spacing between experiences */
+}
+
+.exp-logo img {
+    height: 80px;
+    margin: 0 auto;
+}
+
+.exp-name {
+    flex: 1;
+    color: #fff;
+    margin-left: 20px;
+    /* Added margin for spacing */
+}
+
+.time-exp {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.position-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.company-name {
+    font-size: 18px;
+    color: #bbb;
+}
+
+.exp-time {
+    font-size: 18px;
+    color: lightgray;
+    text-align: right;
+}
+
+.exp-bottom {
+    display: flex;
+    flex-direction: row;
+    background-color: #444;
+    padding: 2%;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+}
+
+.exp-achieve-logo {
+    flex: 0 0 22%;
+    text-align: center;
+}
+
+.exp-achieve-detail {
+    flex: 1;
+    color: #ddd;
+    margin-left: 20px;
+    line-height: 1.6;
+    /* Improved readability */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    margin-top: 50px;
+}
