@@ -5,193 +5,319 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Soluciones de IA aplicada, agentes, RAG y arquitectura de datos. Conoce la experiencia y los proyectos de Sergio Ballesteros."
+      content="Automatización de datos, análisis e inferencias de IA para tu negocio. Sergio Ballesteros: ingeniería de datos e inteligencia artificial aplicada."
     />
-    <meta name="theme-color" content="#f5f3eb" />
-    <meta name="author" content="Sergio Andrés Ballesteros Suárez" />
-    <title>Sergio Ballesteros — IA aplicada y datos</title>
+    <meta name="theme-color" content="#0b171b" />
+    <title>Sergio Ballesteros | Ingeniería de datos e IA</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style/style.css" />
-    <script src="js/content.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-text="skip">Ir al contenido</a>
-    <header class="site-header container">
-      <a class="brand" href="#" aria-label="Sergio Ballesteros — Inicio"
-        >Sergio Ballesteros<span class="brand-dot" aria-hidden="true"
-          >.</span
-        ></a
+    <a class="skip" href="#main" data-i18n="skip">Ir al contenido</a>
+    <header class="site-header wrap">
+      <a class="brand" href="#inicio" aria-label="Sergio Ballesteros, inicio"
+        >SB<span class="brand-mark">/</span><span>Sergio Ballesteros</span></a
       >
-      <div class="header-controls">
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="navigation"
-        >
-          <span></span><span></span
-          ><span class="sr-only" data-text="menu">Abrir menú</span>
-        </button>
-        <nav id="navigation" aria-label="Principal"></nav>
-        <div class="languages" role="group" aria-label="Language / Idioma">
+      <nav id="nav" aria-label="Navegación principal">
+        <a href="#trayectoria" data-i18n="navJourney">Trayectoria</a>
+        <a href="#portafolio" data-i18n="navPortfolio">Portafolio</a>
+        <a href="#perfil" data-i18n="navAbout">Perfil</a>
+        <a href="#contacto" data-i18n="navContact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language" role="group" aria-label="Idioma">
           <button type="button" data-lang="es" aria-pressed="true">ES</button
-          ><span aria-hidden="true">/</span
+          ><span>/</span
           ><button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Cambiar tema"
+          aria-pressed="true"
+        >
+          <span aria-hidden="true">◐</span><span id="theme-label">Claro</span>
+        </button>
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          type="button"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span>
+        </button>
       </div>
     </header>
     <main id="main">
-      <section class="hero container" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title"></h1>
-          <p class="hero-intro" data-text="intro"></p>
-          <p class="hero-detail" data-text="heroDetail"></p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contacto"
-              ><span data-text="talk"></span
-              ><span aria-hidden="true">↗</span></a
-            ><a class="text-link" href="#proyectos"
-              ><span data-text="explore"></span
-              ><span aria-hidden="true">↓</span></a
+      <section id="inicio" class="hero wrap">
+        <div class="hero-main">
+          <div class="hero-copy">
+            <span class="eyebrow"
+              >Sergio Ballesteros <span class="eyebrow-dot"></span>
+              <span data-i18n="heroRole">Ingeniería de datos e IA</span></span
+            >
+            <h1 data-i18n="heroTitle">
+              Automatización de datos, análisis e inferencias de IA
+              <em>para tu negocio.</em>
+            </h1>
+            <p class="hero-lead" data-i18n="heroLead">
+              Ingeniería de vanguardia que conecta datos con inferencia, modelos
+              agénticos, lenguaje natural, web semántica, Gen AI, RAG y O-RAG.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-accent" href="#contacto"
+                ><span data-i18n="heroCta">Comencemos tu proyecto</span
+                ><span aria-hidden="true">↗</span></a
+              ><a class="inline-link" href="#trayectoria"
+                ><span data-i18n="heroExplore">Conoce mi trayectoria</span
+                ><span aria-hidden="true">↓</span></a
+              >
+            </div>
+          </div>
+          <div class="model-visual">
+            <div class="model-top">
+              <span
+                >01 /
+                <span data-i18n="modelLabel">Modelo en movimiento</span></span
+              ><span class="live"><i></i> LIVE</span>
+            </div>
+            <canvas
+              id="model-canvas"
+              aria-label="Animación de una distribución de probabilidades que cambia de amplitud y una trayectoria de gradiente"
+            ></canvas>
+            <div class="model-bottom">
+              <span>μ = 0</span><span>σ <b id="sigma-value">1.00</b></span
+              ><span>∇L → min</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-footer">
+          <span data-i18n="heroFoot"
+            >De datos dispersos a decisiones inteligentes.</span
+          >
+          <div class="hero-stats">
+            <span
+              ><strong>10</strong>
+              <span data-i18n="years">años en datos</span></span
+            ><span
+              ><strong>4</strong>
+              <span data-i18n="aiYears">años en IA y ML</span></span
             >
           </div>
         </div>
-        <!-- Flujo abstracto vectorial: un recurso de marca, no un producto simulado. -->
-        <div class="hero-art" aria-hidden="true">
-          <svg id="flow-art" viewBox="0 0 620 440" fill="none">
-            <g id="flow-lines"></g>
-            <g class="flow-nodes">
-              <circle cx="120" cy="202" r="5" />
-              <circle cx="472" cy="106" r="8" />
-              <circle cx="495" cy="316" r="5" />
-              <circle cx="260" cy="293" r="4" />
-            </g>
-          </svg>
-          <div class="flow-caption"></div>
-        </div>
       </section>
-      <div class="proof container">
-        <div id="metrics" class="metrics"></div>
-        <p class="metric-note" data-text="metricNote"></p>
-      </div>
-      <section
-        id="servicios"
-        class="section container services-section"
-        aria-labelledby="services-title"
-      >
-        <div class="section-heading">
-          <span class="section-label" data-nav="0"></span>
-          <h2 id="services-title" data-text="servicesTitle"></h2>
-          <p data-text="servicesIntro"></p>
-        </div>
-        <div id="service-list" class="service-list"></div>
-      </section>
-      <section
-        id="proyectos"
-        class="section portfolio-section"
-        aria-labelledby="projects-title"
-      >
-        <div class="container">
-          <div class="section-top">
-            <div>
-              <span class="section-label" data-nav="1"></span>
-              <h2 id="projects-title" data-text="projectsTitle"></h2>
-            </div>
-            <p data-text="projectsIntro"></p>
+      <section id="trayectoria" class="section journey-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <span class="eyebrow"
+              >01 / <span data-i18n="navJourney">Trayectoria</span></span
+            >
+            <h2 data-i18n="journeyTitle">
+              De la ingeniería de datos a sistemas de IA en producción.
+            </h2>
+            <p data-i18n="journeyLead">
+              Cada etapa une un problema real con una solución concreta y un
+              resultado medible.
+            </p>
           </div>
-          <div id="project-list" class="project-grid"></div>
+          <div id="journey-grid" class="journey-grid"></div>
+          <div class="journey-education">
+            <div>
+              <span class="eyebrow"
+                >+ <span data-i18n="research">Investigación</span></span
+              >
+              <h3 data-i18n="dengueTitle">
+                Anticipar brotes de dengue en Colombia.
+              </h3>
+              <p data-i18n="dengueText">
+                Mi tesis de maestría usa modelos LSTM para pronosticar casos con
+                3 a 4 semanas de anticipación en varias ciudades.
+              </p>
+            </div>
+            <div class="university">
+              <span data-i18n="universityLabel">Universidad de los Andes</span
+              ><strong data-i18n="masters"
+                >Maestría en Inteligencia Artificial</strong
+              ><span data-i18n="expected"
+                >Graduación prevista: diciembre de 2026</span
+              >
+            </div>
+          </div>
         </div>
       </section>
-      <section
-        id="trayectoria"
-        class="section container experience-section"
-        aria-labelledby="experience-title"
-      >
-        <div class="section-heading">
-          <span class="section-label" data-nav="2"></span>
-          <h2 id="experience-title" data-text="experienceTitle"></h2>
-          <p data-text="experienceIntro"></p>
-          <a
-            class="text-link cv-link"
-            href="Sergio%20Ballesteros%20-%20AI%20Engineer.pdf"
-            download
-            ><span data-text="cv"></span><span aria-hidden="true">↓</span></a
-          >
+      <section id="portafolio" class="section portfolio-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <span class="eyebrow"
+              >02 / <span data-i18n="navPortfolio">Portafolio</span></span
+            >
+            <h2 data-i18n="portfolioTitle">
+              Soluciones que convierten complejidad en capacidad.
+            </h2>
+            <p data-i18n="portfolioLead">
+              Áreas en las que puedo diseñar y desarrollar productos para tu
+              organización.
+            </p>
+          </div>
+          <div id="solution-list" class="solution-list"></div>
         </div>
-        <ol id="experience-list" class="timeline"></ol>
       </section>
-      <section class="section about-section" aria-labelledby="about-title">
-        <div class="container about-layout">
-          <div class="portrait">
+      <section id="perfil" class="section profile-section">
+        <div class="wrap profile-grid">
+          <div class="profile-photo">
             <img
               src="images/profile.jpg"
               alt="Retrato de Sergio Ballesteros"
+              loading="lazy"
               width="800"
               height="800"
-              loading="lazy"
             />
-            <p>Sergio Andrés<br />Ballesteros Suárez</p>
+            <div class="photo-caption">
+              <span>SB / 2026</span
+              ><span data-i18n="profileCaption"
+                >Ingeniería con perspectiva de negocio</span
+              >
+            </div>
           </div>
-          <div class="about-content">
-            <h2 id="about-title" data-text="aboutTitle"></h2>
-            <p class="about-description" data-text="about"></p>
-            <h3 data-text="skillsTitle"></h3>
-            <div id="skills" class="skills"></div>
-            <h3 data-text="educationTitle"></h3>
-            <div id="education" class="education"></div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="contacto"
-        class="contact-section"
-        aria-labelledby="contact-title"
-      >
-        <div class="container contact-layout">
-          <div>
-            <span class="section-label" data-nav="3"></span>
-            <h2 id="contact-title" data-text="contactTitle"></h2>
-            <p data-text="contactText"></p>
-          </div>
-          <div class="contact-links">
-            <span class="contact-label" data-text="emailLabel"></span
-            ><a class="email-link" href="mailto:sergio.ballesteros@pm.me"
-              >sergio.ballesteros@pm.me<span aria-hidden="true">↗</span></a
+          <div class="profile-content">
+            <span class="eyebrow"
+              >03 / <span data-i18n="navAbout">Perfil</span></span
             >
-            <div class="contact-actions">
-              <button id="copy-email" type="button" data-text="copy"></button
-              ><a
+            <h2 data-i18n="aboutTitle">
+              Soy Sergio. Construyo puentes entre los datos y las decisiones.
+            </h2>
+            <p data-i18n="aboutText">
+              Soy Sergio Andrés Ballesteros Suárez. Mi experiencia combina
+              análisis de negocio, ingeniería de datos y desarrollo de IA
+              aplicada. Trabajo desde la definición del problema hasta la
+              arquitectura, el despliegue y la observabilidad.
+            </p>
+            <div class="credentials">
+              <div>
+                <span>2016</span
+                ><strong data-i18n="bachelor">Ingeniero Industrial</strong
+                ><span>Universidad de la Sabana</span>
+              </div>
+              <div>
+                <span>2026</span
+                ><strong data-i18n="masters"
+                  >Maestría en Inteligencia Artificial</strong
+                ><span>Universidad de los Andes</span>
+              </div>
+            </div>
+            <h3 data-i18n="toolsTitle">Herramientas con las que trabajo</h3>
+            <div id="tool-logos" class="tool-logos"></div>
+            <div class="social-links" aria-label="Perfiles profesionales">
+              <a
                 href="https://www.linkedin.com/in/engineersergio/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >LinkedIn <span aria-hidden="true">↗</span></a
+                aria-label="LinkedIn de Sergio"
+                ><span class="social-logo"
+                  ><img src="images/logos/linkedin.svg" alt="" loading="lazy"
+                /></span>
+                LinkedIn ↗</a
+              ><a
+                href="https://www.kaggle.com/engineersergio"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kaggle de Sergio"
+                ><span class="social-logo"
+                  ><img src="images/logos/kaggle.svg" alt="" loading="lazy"
+                /></span>
+                Kaggle ↗</a
+              ><a
+                href="https://www.credly.com/users/engineersergio"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Credly de Sergio"
+                ><span class="social-logo"
+                  ><img src="images/logos/credly.svg" alt="" loading="lazy"
+                /></span>
+                Credly ↗</a
               >
             </div>
-            <p
-              id="copy-status"
-              class="copy-status"
-              role="status"
-              aria-live="polite"
-            ></p>
           </div>
         </div>
       </section>
+      <section id="contacto" class="section contact-section">
+        <div class="wrap contact-grid">
+          <div>
+            <span class="eyebrow"
+              >04 / <span data-i18n="navContact">Contacto</span></span
+            >
+            <h2 data-i18n="contactTitle">Construyamos lo que sigue.</h2>
+            <p data-i18n="contactText">
+              Cuéntame qué desafío quieres resolver. Hablemos de la solución
+              adecuada para tu equipo.
+            </p>
+          </div>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="/api/contact"
+            method="post"
+          >
+            <label
+              ><span data-i18n="nameLabel">Tu nombre</span
+              ><input
+                name="name"
+                autocomplete="name"
+                required
+                maxlength="120" /></label
+            ><label
+              ><span data-i18n="emailLabel">Tu correo</span
+              ><input
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="254" /></label
+            ><label
+              ><span data-i18n="messageLabel">Cuéntame sobre tu proyecto</span
+              ><textarea
+                name="message"
+                rows="4"
+                required
+                maxlength="5000"
+              ></textarea></label
+            ><label class="honeypot" aria-hidden="true"
+              >Website<input
+                name="website"
+                tabindex="-1"
+                autocomplete="off" /></label
+            ><button
+              class="button button-accent"
+              type="submit"
+              data-i18n="send"
+            >
+              Enviar mensaje ↗
+            </button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer class="container footer">
+    <footer class="site-footer wrap">
       <span>© <span id="year"></span> Sergio Ballesteros</span
-      ><span data-text="footer"></span><a href="#" data-text="backTop"></a>
+      ><a
+        href="Sergio%20Ballesteros%20-%20AI%20Engineer.pdf"
+        download
+        data-i18n="downloadCv"
+        >Descargar CV ↓</a
+      ><a href="#inicio" data-i18n="backTop">Volver arriba ↑</a>
     </footer>
     <noscript
-      ><div class="noscript">
-        Sergio Ballesteros — Ingeniero de IA y datos / AI & data engineer.
+      ><p class="noscript">
+        Sergio Ballesteros · Ingeniería de datos e IA.
         <a href="Sergio%20Ballesteros%20-%20AI%20Engineer.pdf"
-          >Descarga el CV / Download the CV</a
+          >Descargar CV / Download CV</a
         >.
-        <a href="mailto:sergio.ballesteros@pm.me">sergio.ballesteros@pm.me</a>.
-        Activa JavaScript para ver el sitio completo / Enable JavaScript to view
-        the full website.
-      </div></noscript
+      </p></noscript
     >
   </body>
 </html>

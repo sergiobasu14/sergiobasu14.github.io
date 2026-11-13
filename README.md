@@ -1,36 +1,35 @@
 # Sergio Ballesteros · sitio profesional
 
-Sitio estático bilingüe (ES/EN) escrito en HTML, CSS y JavaScript, sin dependencias de ejecución ni compilación.
+Sitio bilingüe en HTML, CSS y JavaScript. Incluye tema claro/oscuro, animación de distribución normal con movimiento reducido accesible, trayectoria, portafolio de soluciones, perfil y formulario interno.
 
-## Ejecutar localmente
-
-Desde la raíz del proyecto:
+## Ejecutar
 
 ```sh
-python3 -m http.server 8000
+node server.js
 ```
 
-Abre http://localhost:8000. También puedes abrir `index.html` directamente; copiar el correo al portapapeles funciona en localhost o HTTPS.
+Abre http://127.0.0.1:8000. El servidor solo usa módulos incluidos en Node.js.
+
+## Envío de mensajes
+
+El formulario envía una solicitud a `/api/contact`. El servidor valida los datos y llama a la [API de Resend](https://resend.com/features/email-api). La clave y el destinatario quedan en el servidor; el navegador no recibe ni muestra el correo de destino.
+
+Antes de activar el envío, configura estas variables de entorno en el servicio de alojamiento:
+
+- `RESEND_API_KEY`: clave privada de Resend.
+- `CONTACT_TO_EMAIL`: correo que recibe las consultas.
+- `CONTACT_FROM_EMAIL`: remitente autorizado por tu dominio en Resend.
+
+Mientras falten, el formulario informa que el servicio no está configurado y no afirma que se envió un mensaje. Un alojamiento puramente estático debe añadir una ruta compatible `/api/contact` o ejecutar este servidor Node.js.
 
 ## Organización
 
-- `index.html`: estructura semántica, navegación, secciones y enlaces de contacto.
-- `style/style.css`: variables visuales, componentes y adaptación a móvil, con secciones comentadas.
-- `js/content.js`: todos los textos en español e inglés, incluidos servicios, casos, trayectoria, habilidades y formación.
-- `js/script.js`: renderizado de contenido, idioma, menú móvil, portapapeles y diagramas vectoriales.
-- `images/`: retrato, favicon y recursos existentes.
-- `docs/design-concept.png`: referencia visual generada; el contenido factual se toma del PDF, no de esta imagen.
-- `docs/design.md`: decisiones visuales y criterios de revisión.
-- `navigator/`: accesos antiguos que llevan a la sección equivalente del sitio actual.
+- `index.html`: estructura y secciones.
+- `style/style.css`: sistema visual, temas y adaptación móvil.
+- `js/script.js`: traducciones, secciones, tema, animación y formulario.
+- `server.js`: archivos estáticos y entrega de mensajes.
+- `images/profile.jpg`: fotografía del perfil.
 
-## Actualizar contenido
+Los enlaces de LinkedIn, Kaggle y Credly usan el identificador `engineersergio` proporcionado. La maestría se presenta como formación en curso, con fecha prevista de diciembre de 2026.
 
-Edita el objeto `window.siteContent` en `js/content.js`. Mantén las mismas claves y el mismo orden de elementos en `es` y `en`. Los textos son contenido local confiable; no introduzcas HTML externo en los campos. Las fechas, métricas y atribuciones provienen del CV y de la información confirmada durante la definición del proyecto.
-
-El selector recuerda el idioma y lo refleja en `?lang=es` o `?lang=en`. El parámetro de la URL tiene prioridad sobre la preferencia guardada. Los enlaces a las secciones conservan identificadores estables en ambos idiomas.
-
-## Identidad y publicación
-
-La identidad actual es Sergio Ballesteros; el nombre de la empresa todavía no ha sido suministrado. El CV descargable es el PDF existente, en inglés. Correo y LinkedIn son los indicados en ese documento.
-
-Se puede servir la raíz en cualquier alojamiento estático. No hay formulario ni backend: el contacto utiliza correo y LinkedIn. Esta entrega es local; no se publica con Sites porque su flujo de sincronización utiliza Git, restringido por el usuario.
+No se ejecutaron comandos de Git ni se publicó el sitio.
